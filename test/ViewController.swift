@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        DispatchQueue.global().async {
+            print("async do something\(Thread.current)")
+            DispatchQueue.main.async {
+                print("come back to main thread\(Thread.current)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

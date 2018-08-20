@@ -14,6 +14,8 @@
 		13A79648212A81B8005CDF83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A79646212A81B8005CDF83 /* LaunchScreen.storyboard */; };
 		13A79653212A81B8005CDF83 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A79652212A81B8005CDF83 /* testTests.swift */; };
 		13A7965E212A81B8005CDF83 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A7965D212A81B8005CDF83 /* testUITests.swift */; };
+		13A7966C212A8916005CDF83 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A7966B212A8916005CDF83 /* MineViewController.swift */; };
+		13EB4601212AE66B00569AAD /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB4600212AE66B00569AAD /* HomeUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		13A79659212A81B8005CDF83 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A7965D212A81B8005CDF83 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		13A7965F212A81B8005CDF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A7966B212A8916005CDF83 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		13EB4600212AE66B00569AAD /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				13A79644212A81B8005CDF83 /* Assets.xcassets */,
 				13A79646212A81B8005CDF83 /* LaunchScreen.storyboard */,
 				13A79649212A81B8005CDF83 /* Info.plist */,
+				13A7966B212A8916005CDF83 /* MineViewController.swift */,
+				13EB4600212AE66B00569AAD /* HomeUIView.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A79640212A81B7005CDF83 /* ViewController.swift in Sources */,
+				13EB4601212AE66B00569AAD /* HomeUIView.swift in Sources */,
 				13A7963E212A81B7005CDF83 /* AppDelegate.swift in Sources */,
+				13A7966C212A8916005CDF83 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LHM3ZUGHF;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LHM3ZUGHF;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
