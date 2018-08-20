@@ -19,7 +19,6 @@ class ViewController: UITabBarController {
                 print("come back to main thread\(Thread.current)")
             }
         }
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
 
     override func didReceiveMemoryWarning() {

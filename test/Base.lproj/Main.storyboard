@@ -73,18 +73,35 @@
                                     <action selector="btnClick:" destination="a1G-L7-7TS" eventType="touchUpInside" id="1FX-3M-IPi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNE-B6-yUn">
+                                <rect key="frame" x="133" y="417" width="108" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Alamofire测试"/>
+                                <connections>
+                                    <action selector="btnClick2:" destination="a1G-L7-7TS" eventType="touchUpInside" id="LYQ-pw-2mJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCH-Qi-CR5">
+                                <rect key="frame" x="57" y="179" width="260" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91534849409494845" green="1" blue="0.57567598224912053" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" staticText="YES"/>
                         </accessibility>
                         <viewLayoutGuide key="safeArea" id="JGG-58-Bix"/>
+                        <connections>
+                            <outlet property="imgView" destination="PCH-Qi-CR5" id="Jn0-6F-JAQ"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="3kz-dq-jnh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uc-vT-EVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-396" y="-369"/>
+            <point key="canvasLocation" x="-396" y="-369.45812807881777"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h6I-BM-VQk">
