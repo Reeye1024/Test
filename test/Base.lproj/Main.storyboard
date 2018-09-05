@@ -11,40 +11,40 @@
     </dependencies>
     <scenes>
         <!--我的-->
-        <scene sceneID="M0H-4d-yI4">
+        <scene sceneID="ymT-eJ-y9I">
             <objects>
-                <viewController id="jw6-1P-EgA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7iO-eK-67C" customClass="MineViewController" customModule="test" customModuleProvider="target">
+                <navigationController id="PO1-MO-QXa" customClass="MineViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" id="ys2-q4-VOe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y7Z-E8-aBZ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mtl-hu-OIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="309"/>
+        </scene>
+        <!--示例-->
+        <scene sceneID="u10-uh-coB">
+            <objects>
+                <tableViewController id="gGx-VM-HhG" customClass="DemoViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AX5-GL-AfV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BBBBB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTC-nK-nhJ">
-                                <rect key="frame" x="146" y="486" width="54" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10a-WU-nSp">
-                                <rect key="frame" x="144" y="267" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Alert"/>
-                                <connections>
-                                    <action selector="click:" destination="7iO-eK-67C" eventType="touchUpInside" id="2gT-sj-laI"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Tk2-DI-E0T"/>
                         <connections>
-                            <outlet property="lbl" destination="gTC-nK-nhJ" id="J9x-cz-1n9"/>
+                            <outlet property="dataSource" destination="gGx-VM-HhG" id="3iI-YD-Rhb"/>
+                            <outlet property="delegate" destination="gGx-VM-HhG" id="dJT-c4-Fte"/>
                         </connections>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="我的" id="23t-fG-aVj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1FY-nx-FBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="示例" id="o5w-wz-pOL"/>
+                    <connections>
+                        <outlet property="tableView" destination="AX5-GL-AfV" id="0dv-Gd-fgh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHA-Xv-A1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-396" y="284"/>
+            <point key="canvasLocation" x="-994" y="982"/>
         </scene>
         <!--首页-->
         <scene sceneID="XtU-13-Vws">
@@ -87,6 +87,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91534849409494845" green="1" blue="0.57567598224912053" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2P-LY-8Uu">
+                                <rect key="frame" x="162" y="625" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NavBtn"/>
+                                <connections>
+                                    <action selector="navBtnClick:" destination="a1G-L7-7TS" eventType="touchUpInside" id="Dqw-Na-He0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
@@ -95,6 +103,7 @@
                         <viewLayoutGuide key="safeArea" id="JGG-58-Bix"/>
                         <connections>
                             <outlet property="imgView" destination="PCH-Qi-CR5" id="Jn0-6F-JAQ"/>
+                            <outlet property="navBar" destination="Azt-rs-jZs" id="6KX-Ij-ncz"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="3kz-dq-jnh"/>
@@ -114,7 +123,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="SW4-Yi-0SS" kind="relationship" relationship="viewControllers" id="08g-hy-qtu"/>
-                        <segue destination="jw6-1P-EgA" kind="relationship" relationship="viewControllers" id="CEb-Cy-35W"/>
+                        <segue destination="gGx-VM-HhG" kind="relationship" relationship="viewControllers" id="GIB-g5-dKA"/>
+                        <segue destination="PO1-MO-QXa" kind="relationship" relationship="viewControllers" id="wbm-CN-XEE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scd-jZ-mBe" userLabel="First Responder" sceneMemberID="firstResponder"/>

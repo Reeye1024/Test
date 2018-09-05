@@ -8,14 +8,39 @@
 
 import UIKit
 
-class MineViewController: UIView {
+class MineViewController: UINavigationController {
     
     @IBOutlet weak var lbl: UILabel!
     
-    @IBAction func click(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(self.navigationController == nil)
+        pushViewController(FirstViewController(), animated: true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    /*@IBAction*/ func click(_ sender: Any) {
         let alert = UIAlertController(title: "提示", message: "alert一下", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "好的", style: .default) { (e) in
             self.lbl.text = "sssss"
+            let imgView = UIImageView(frame: CGRect(x: 30, y: 30, width: 100, height: 100))
+            imgView.image = UIImage(named: "bg1")
+            imgView.layer.cornerRadius = 50
+            imgView.layer.masksToBounds = true
+            imgView.layer.maskedCorners = .layerMinXMaxYCorner
+//            imgView.layer.borderColor = CGColor.init(colorSpace: CGColorSpace.init(name: "kCGColorSpaceGenericRGB" as CFString)!, components: [0.792, 0.792, 0.816, 1])
+            imgView.layer.borderColor = UIColor.purple.cgColor
+            imgView.layer.borderWidth = 2
+            
+            imgView.layer.shadowOffset = CGSize(width: 10, height: 10)
+            imgView.layer.shadowColor = UIColor.black.cgColor
+            imgView.layer.shadowOpacity = 0.5
+            imgView.layer.shadowRadius = 50
+//            imgView.layer.shadow
+//            self.addSubview(imgView)
         })
         alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { e in
             if let url = URL(string: "http://60.174.203.118:8018/tender/") {
